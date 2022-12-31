@@ -132,3 +132,10 @@ class UserFormDeleteAll(System.Windows.Forms.Form):
     def cancel_button_mouse_leave(self, sender, args):
         self._cancel_button.ForeColor = System.Drawing.Color.FromName('White')
         self._cancel_button.BackColor = System.Drawing.Color.FromArgb(255, 60, 90, 100)
+
+
+form = UserFormDeleteAll()
+form.ShowDialog()
+# печатаем список выбора пользователя
+for elem in form.list_user_select:
+    print(elem)
