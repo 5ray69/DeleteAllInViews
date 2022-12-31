@@ -61,7 +61,7 @@ class UserFormDeleteAll(System.Windows.Forms.Form):
 
         self.button_fonts = System.Drawing.Font(
                                 'Arial',
-                                System.Single(11),ipy
+                                System.Single(11),
                                 System.Drawing.FontStyle.Bold,
                                 System.Drawing.GraphicsUnit.Point)
 
@@ -134,7 +134,7 @@ class UserFormDeleteAll(System.Windows.Forms.Form):
         self._cancel_button.BackColor = System.Drawing.Color.FromArgb(255, 60, 90, 100)
 
 
-form = UserFormDeletAll()
+form = UserFormDeleteAll()
 form.ShowDialog()
 # печатаем список выбора пользователя
 for elem in form.list_user_select:
