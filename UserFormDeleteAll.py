@@ -11,7 +11,7 @@ offset = 27
 left_point = 100
 height_point = 10
 
-class UserFormDeletAll(System.Windows.Forms.Form):
+class UserFormDeleteAll(System.Windows.Forms.Form):
     def __init__(self):
         self.Text = "Выберите уровни"
         self.BackColor = System.Drawing.Color.FromArgb(238, 238, 238)
