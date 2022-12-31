@@ -43,7 +43,6 @@ class UserFormDeleteAll(System.Windows.Forms.Form):
         self._list_box.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple
         self.Controls.Add(self._list_box)
 
-
         self._label = System.Windows.Forms.Label()
         self._label.Text = 'щелчок мышью или\
                             \nнажатие клавиши ПРОБЕЛ\
