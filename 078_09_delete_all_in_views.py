@@ -6,10 +6,8 @@ clr.AddReference('RevitServices')  # Работа с документом и т�
 from Autodesk.Revit import DB
 from Autodesk.Revit.DB import Architecture as AR
 from Autodesk.Revit.DB import FilteredElementCollector as FEC
-from RevitServices.Persistence import DocumentManager as DM  # Менеджер документа
+from RevitServices.Persistence import DocumentManager as DM
 from System.Collections.Generic import List
-# from Autodesk.Revit.UI import Selection as SEL
-
 
 import sys
 sys.path += [
@@ -35,6 +33,8 @@ for el in form.list_user_select:
         # если активный вид не чертежный вид
         if not isinstance(doc.ActiveView, DB.ViewDrafting):
             levels.append(doc.ActiveView.GenLevel.Name)
+        else:
+            ErrorMessage()
     else:
         levels.append(el)
 

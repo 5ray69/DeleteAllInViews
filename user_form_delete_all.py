@@ -7,9 +7,18 @@ import System
 import System.Drawing
 import System.Windows.Forms
 
+
+class ErrorMessage(Exception):
+    def __init__(self):
+        self.message = "Активные вид не связан с уровнем.\
+                        \nАктивируйте другой вид."
+        System.Windows.Forms.MessageBox.Show(self.message)
+
+
 offset = 27
 left_point = 100
 height_point = 10
+
 
 class UserFormDeleteAll(System.Windows.Forms.Form):
     def __init__(self):
