@@ -10,7 +10,7 @@ import System.Windows.Forms
 
 class ErrorMessage(Exception):
     def __init__(self):
-        self.message = "Активные вид не связан с уровнем.\
+        self.message = "Активный вид не связан с уровнем.\
                         \nАктивируйте другой вид."
         System.Windows.Forms.MessageBox.Show(self.message)
 
