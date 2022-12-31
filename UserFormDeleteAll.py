@@ -16,17 +16,16 @@ class UserFormDeletAll(System.Windows.Forms.Form):
         self.Text = "Выберите уровни"
         self.BackColor = System.Drawing.Color.FromArgb(238, 238, 238)
         caption_height = System.Windows.Forms.SystemInformation.CaptionHeight
-        self.MinimumSize = System.Drawing.Size(300, (800 + caption_height))
+        self.MinimumSize = System.Drawing.Size(300, (830 + caption_height))
 
         self.list_user_select = []
 
         self._list_box = System.Windows.Forms.ListBox()
-        self._list_box.Size = System.Drawing.Size(50, 650)
-        self._list_box.Location = System.Drawing.Point(120,10)
+        self._list_box.Size = System.Drawing.Size(110, 670)
+        self._list_box.Location = System.Drawing.Point(70, 10)
         self._list_box.BorderStyle = 0
         self._list_box.Font = System.Drawing.Font(
                             'Arial', System.Single(11), System.Drawing.FontStyle.Bold)
-        self._list_box.Items.Add('LU300')
         self._list_box.Items.Add('LU200')
         self._list_box.Items.Add('LU100')
         self._list_box.Items.Add('')
@@ -39,8 +38,11 @@ class UserFormDeletAll(System.Windows.Forms.Form):
         self._list_box.Items.Add('LR100')
         self._list_box.Items.Add('LR200')
         self._list_box.Items.Add('LR300')
+        self._list_box.Items.Add('')
+        self._list_box.Items.Add('Активный вид')
         self._list_box.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple
         self.Controls.Add(self._list_box)
+
 
         self._label = System.Windows.Forms.Label()
         self._label.Text = 'щелчок мышью или\
@@ -53,14 +55,14 @@ class UserFormDeletAll(System.Windows.Forms.Form):
                                 System.Drawing.FontStyle.Italic,
                                 System.Drawing.GraphicsUnit.Point)
         self._label.Location = System.Drawing.Point(
-                                        30, self.MinimumSize.Height - 155)
+            30, self._list_box.Location.Y + self._list_box.Size.Height + 10)
         self._label.Size = System.Drawing.Size(
             self._label.PreferredWidth, self._label.PreferredHeight)
         self.Controls.Add(self._label)
 
         self.button_fonts = System.Drawing.Font(
                                 'Arial',
-                                System.Single(11),
+                                System.Single(11),ipy
                                 System.Drawing.FontStyle.Bold,
                                 System.Drawing.GraphicsUnit.Point)
 
