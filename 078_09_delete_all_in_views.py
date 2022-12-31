@@ -30,8 +30,8 @@ form.ShowDialog()
 levels = []
 for el in form.list_user_select:
     if el == 'Активный вид':
-        # если активный вид не чертежный вид
-        if not isinstance(doc.ActiveView, DB.ViewDrafting):
+        # если активный вид связан с уровнем
+        if isinstance(doc.ActiveView, DB.ViewPlan):
             levels.append(doc.ActiveView.GenLevel.Name)
         else:
             ErrorMessage()
